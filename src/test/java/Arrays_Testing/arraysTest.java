@@ -1,0 +1,33 @@
+package Arrays_Testing;
+import Arrays.*;
+import org.assertj.core.api.Assertions;
+import org.testng.annotations.Test;
+
+public class arraysTest {
+
+    @Test
+    public void sumofTwoNumbers_equalThrid() {
+
+
+        Assertions.
+                assertThat(sumTwoNumbers_EqualsTarget.twoSum(new int[]{2,7,11, 15}, 9)).isEqualTo(new int[]{0,1});
+
+        Assertions.
+                assertThat(sumTwoNumbers_EqualsTarget.twoSum(new int[]{3,2,4}, 6)).isEqualTo(new int[]{1, 2});
+
+        Assertions.
+                assertThat(sumTwoNumbers_EqualsTarget.twoSum(new int[]{3,3}, 6)).isEqualTo(new int[]{0, 1});
+
+
+        // Calling Optimised Way
+        Assertions.
+                assertThat(sumTwoNumbers_EqualsTarget.twoSum(new int[]{2,7,11, 15}, 9)).isEqualTo(new int[]{0,1});
+
+        Assertions.
+                assertThat(sumTwoNumbers_EqualsTarget.twoSum(new int[]{3,2,4}, 6)).isEqualTo(new int[]{1, 2});
+
+        Assertions.
+                assertThat(sumTwoNumbers_EqualsTarget.twoSum(new int[]{3,3}, 6)).isEqualTo(new int[]{0, 1});
+
+    }
+}
