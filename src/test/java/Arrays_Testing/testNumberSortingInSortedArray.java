@@ -2,7 +2,6 @@ package Arrays_Testing;
 
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
-import org.testng.asserts.Assertion;
 
 public class testNumberSortingInSortedArray {
 
