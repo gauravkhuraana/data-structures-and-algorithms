@@ -1,11 +1,60 @@
 package knapsack_Testing;
 
+import knapsack.TargetSum;
 import knapsack.countOfSubsetSum;
 
+import knapsack.minimumSubSetSumDifference;
+import knapsack.countOfSubsetWithGivenDifference;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
+
 public class knapsackTestCases {
+
+
+
+
+    @Test
+    public static void test_countOfTargetSum() {
+
+        System.out.println(" Testing how many ways can produce a target sum");
+        Assertions.assertThat(TargetSum.countOfTargetSum(new int[]{1,1,3,4},1)).isEqualTo(3);
+        Assertions.assertThat(TargetSum.countOfTargetSum(new int[]{1,2,3,4},0)).isEqualTo(2);
+        Assertions.assertThat(TargetSum.countOfTargetSum(new int[]{1,2,3},1)).isEqualTo(2);
+
+
+    }
+
+
+    @Test
+    public static void test_countOfSubsetDifference() {
+
+        System.out.println(" Testing how many pairs can produce a certain difference");
+        Assertions.assertThat(countOfSubsetWithGivenDifference.countOfSetWithDifference(new int[]{1,1,3,4},1)).isEqualTo(3);
+        Assertions.assertThat(countOfSubsetWithGivenDifference.countOfSetWithDifference(new int[]{1,2,5,4},1)).isEqualTo(2);
+
+        Assertions.assertThat(countOfSubsetWithGivenDifference.countOfSetWithDifference(new int[]{2,2,7,4},3)).isEqualTo(2);
+
+        //(2,7) (2,4)
+
+
+    }
+
+    @Test
+    // Range - 2(number of items)
+    // number of items = Range/2
+    public static void test_minimumSumDifference() {
+        System.out.println("Testing if we are able to find the minimum Difference in a subset ");
+
+        Assertions.assertThat(minimumSubSetSumDifference.minimumSumDifference(new int[]{1,3,5})).isEqualTo(1);
+        Assertions.assertThat(minimumSubSetSumDifference.minimumSumDifference(new int[]{1,3,4,5,7})).isEqualTo(0);
+        Assertions.assertThat(minimumSubSetSumDifference.minimumSumDifference(new int[]{5,3,4})).isEqualTo(2);
+
+        //Assertions.assertThat(minimumSubSetSumDifference.minimumSumDifference(new int[]{})).isEqualTo(0);
+        Assertions.assertThat(minimumSubSetSumDifference.minimumSumDifference(new int[]{1,1})).isEqualTo(0);
+
+
+    }
 
     @Test
     public static void test_countOfEqualParition() {

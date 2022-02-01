@@ -1,5 +1,5 @@
 package Arrays_Testing;
-import Arrays.*;
+import ArraysPkg.*;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 

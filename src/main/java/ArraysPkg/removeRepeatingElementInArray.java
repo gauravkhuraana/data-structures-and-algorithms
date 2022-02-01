@@ -1,6 +1,4 @@
-package Arrays;
-
-import com.sun.xml.internal.ws.policy.AssertionSet;
+package ArraysPkg;
 
 public class removeRepeatingElementInArray {
 

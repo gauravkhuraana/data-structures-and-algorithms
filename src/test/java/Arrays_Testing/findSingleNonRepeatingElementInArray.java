@@ -1,7 +1,6 @@
 package Arrays_Testing;
 
-import Arrays.FindSingleNonRepeatingNumber;
-import Arrays.removeRepeatingElementInArray;
+import ArraysPkg.FindSingleNonRepeatingNumber;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 

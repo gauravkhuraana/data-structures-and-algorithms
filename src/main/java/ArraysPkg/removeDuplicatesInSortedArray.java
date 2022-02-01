@@ -1,4 +1,4 @@
-package Arrays;
+package ArraysPkg;
 
 public class removeDuplicatesInSortedArray {
 
