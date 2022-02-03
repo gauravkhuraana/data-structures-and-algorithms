@@ -1,0 +1,737 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>Knapsack Problem&#13;
+(www.udzial.com)&#13;
+By :- Gaurav Khurana&#13;
+Credits - Aditya Verma</title>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="0iup89ittfkr9csebgu8qjtako">Knapsack Problem&#13;
+(www.udzial.com)&#13;
+By :- Gaurav Khurana&#13;
+Credits - Aditya Verma</a>
+</h1>
+<div align="center" class="globalOverview">
+<img src="Knapsack Problem (www.udzial.com) By  - Gaurav Khurana Credits - Aditya Verma_files/images/Knapsack Problem (www.udzial.com) By  - Gaurav Khurana Credits - Aditya Verma.jpg"></div>
+<h2 class="topic">
+<a name="3kcrnm7c4oo77e4snsrgf4r09o">define</a>
+</h2>
+<h3 class="topic">
+<a name="41h75mbn9flelgvocqmk20vpk9">&nbsp;knapsack is a bag where we want to carry&#13;
+maximum value. Bag can be less filled &#13;
+but value is maximum</a>
+</h3>
+<h2 class="topic">
+<a name="42dnl2r8lbqkuipai8e0udji5p">Types</a>
+</h2>
+<h3 class="topic">
+<a name="21f4h461muraemcokd9njp4gmf">&nbsp;Fractional</a>
+</h3>
+<h3 class="topic">
+<a name="00l5c4kl3088v5353qb5rpq4ot">&nbsp;&nbsp;fraction of an object can be present</a>
+</h3>
+<h3 class="topic">
+<a name="5b4og30h8p4hnjudkjblp422hm">&nbsp;0/1</a>
+</h3>
+<h3 class="topic">
+<a name="2gm6v7knk1t8qtb8141hra7n7n">&nbsp;&nbsp;Either the object is present once&#13;
+or not present at all</a>
+</h3>
+<h3 class="topic">
+<a name="6egv5h55q9pbqtlmgv29u8afgu">&nbsp;Unbounded</a>
+</h3>
+<h3 class="topic">
+<a name="6cpb2p2fa8nfj54jgrfpg5hevd">&nbsp;&nbsp;Object can be present more than once</a>
+</h3>
+<h2 class="topic">
+<a name="7dh5d8k66g307smegikmg62oen">how to identify</a>
+</h2>
+<h3 class="topic">
+<a name="21u3gs9k6lpk6vcu7o21hvjkjj">&nbsp;choice</a>
+</h3>
+<h3 class="topic">
+<a name="7u8cf4f347af97goseiuui87oq">&nbsp;optimal</a>
+</h3>
+<h3 class="topic">
+<a name="3flmv5fmpq1udg5ua928oh04r5">&nbsp;&nbsp;max profit</a>
+</h3>
+<h3 class="topic">
+<a name="1bv79dvluk0qa9t2v77tr2tilk">&nbsp;There could be just one array given</a>
+</h3>
+<h3 class="topic">
+<a name="4ap5u6b1ogm7qkp4c5jpvfumla">&nbsp;&nbsp;Consider it weight</a>
+</h3>
+<h2 class="topic">
+<a name="2ltfutt1a737ocqqakrups7mkc">0/1 knapsack</a>
+</h2>
+<h3 class="topic">
+<a name="5so4547o50sh3rsb8sbi1pvkm9">&nbsp;Recursive Soluion</a>
+</h3>
+<h3 class="topic">
+<a name="4cvl1asgua82tufmj7e0ff7p3b">&nbsp;&nbsp;Base condition</a>
+</h3>
+<h3 class="topic">
+<a name="512ch5alkvkbdd8sa62lvek2c9">&nbsp;&nbsp;&nbsp;if val==0 || weight==0 return 0</a>
+</h3>
+<h3 class="topic">
+<a name="4o4re1gp33nlnabm47oijojdla">&nbsp;&nbsp;Choice diagram</a>
+</h3>
+<h3 class="topic">
+<a name="69aupjmfbhg4g255r4m0objcfd">&nbsp;&nbsp;&nbsp;if Wn-1 &lt;= Kw</a>
+</h3>
+<h3 class="topic">
+<a name="3kmee5inc5fddh5g6sac0hf3th">&nbsp;&nbsp;&nbsp;&nbsp;Wn-1 + func(wAr,vAr,Kw-(Wn-1) , n-1)</a>
+</h3>
+<h3 class="topic">
+<a name="1p5j5u6j86rgmcp6obd1eovvug">&nbsp;&nbsp;&nbsp;&nbsp;If not selected &#13;
+dont reduce weight</a>
+</h3>
+<h3 class="topic">
+<a name="6db4l0oi7fvupgtq3ib0h0593g">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Func(wAr,vAr,Kw,n-1)</a>
+</h3>
+<h3 class="topic">
+<a name="7atosmg8i1pft0rg8pdl7ng3na">&nbsp;&nbsp;&nbsp;If Wn-1&gt;Kw</a>
+</h3>
+<h3 class="topic">
+<a name="4739be8p8tnt3cp1s8db3qqoj8">&nbsp;&nbsp;&nbsp;&nbsp;not selected since&#13;
+weight is more</a>
+</h3>
+<h3 class="topic">
+<a name="29924ahfffmcar0mbc9paf7jlb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;func(wAr,Var,W,n-1)</a>
+</h3>
+<h3 class="topic">
+<a name="1ouivc35a9oaa59ra1r7nao8kl">&nbsp;&nbsp;Jargons</a>
+</h3>
+<h3 class="topic">
+<a name="5lgk12a0akdflplq0gjcuf0lsj">&nbsp;&nbsp;&nbsp;wAr</a>
+</h3>
+<h3 class="topic">
+<a name="5bckk93nnrnf50411ud1d0eekm">&nbsp;&nbsp;&nbsp;&nbsp;Weight Array</a>
+</h3>
+<h3 class="topic">
+<a name="05ojifqdps6h73t3ob6nednakb">&nbsp;&nbsp;&nbsp;Kw</a>
+</h3>
+<h3 class="topic">
+<a name="2vo0n71qhato20aau5ts98t9dk">&nbsp;&nbsp;&nbsp;&nbsp;Knapsack Weight</a>
+</h3>
+<h3 class="topic">
+<a name="7vt7oul2lb2ppifj0cmi6rof6s">&nbsp;&nbsp;&nbsp;vAr</a>
+</h3>
+<h3 class="topic">
+<a name="069d1r71vcgcoe2mscjbh3vdo1">&nbsp;&nbsp;&nbsp;&nbsp;Value Array</a>
+</h3>
+<h3 class="topic">
+<a name="72ebvpv30iag3n52dg12mltllf">&nbsp;Memoization</a>
+</h3>
+<h3 class="topic">
+<a name="066gdc2a5m837ur82647cbqv52">&nbsp;&nbsp;create a matrix &#13;
+(since we want to store till n)</a>
+</h3>
+<h3 class="topic">
+<a name="6t1105lbonvb6l2up098e937d1">&nbsp;&nbsp;&nbsp;n+1</a>
+</h3>
+<h3 class="topic">
+<a name="7rafq32ohdkveddmrue74cvjs0">&nbsp;&nbsp;&nbsp;W+1</a>
+</h3>
+<h3 class="topic">
+<a name="4lttb43jffqma8jjhj770n2mf6">&nbsp;&nbsp;&nbsp;int static t[101][1001]</a>
+</h3>
+<h3 class="topic">
+<a name="1jo1n48s48v4ahln3jkb4vggg7">&nbsp;&nbsp;&nbsp;&nbsp;If you know &#13;
+the constraints</a>
+</h3>
+<h3 class="topic">
+<a name="537pvdt8a698rf89j6hk1skgso">&nbsp;&nbsp;initialise matrix to -1</a>
+</h3>
+<h3 class="topic">
+<a name="1g5n189c3umno8thfguur1mn21">&nbsp;&nbsp;&nbsp;int t[n+1][w+1]</a>
+</h3>
+<h3 class="topic">
+<a name="0kth4imj5np75g1rhvi58nnub3">&nbsp;&nbsp;&nbsp;memset(t,-1,sizeof(t))</a>
+</h3>
+<h3 class="topic">
+<a name="1a46e7c969dmetjhirv2n2vjtl">&nbsp;&nbsp;Base condition</a>
+</h3>
+<h3 class="topic">
+<a name="77kr8q1kekusl2vs89tmdfmmql">&nbsp;&nbsp;&nbsp;if val==0 || weight==0 return 0</a>
+</h3>
+<h3 class="topic">
+<a name="4burtipshi4e7vc7rl92ag9ask">&nbsp;&nbsp;Additional condition &#13;
+based on matrix value</a>
+</h3>
+<h3 class="topic">
+<a name="4jg55jv662m92pak76nvau2teb">&nbsp;&nbsp;&nbsp;if (t[n][w]!=-1)&#13;
+  return t[n][w]</a>
+</h3>
+<h3 class="topic">
+<a name="3hlquvtp1pfsgrcu402i8hfaiv">&nbsp;&nbsp;if(WAr[n-1] &lt;= W)</a>
+</h3>
+<h3 class="topic">
+<a name="3udhgrrrqsgs5lrfd8a1to5d5a">&nbsp;&nbsp;&nbsp;return t[n][w] = max(val(n-1)+knapsack(WtAr, VAr, W-WtAr[n-1],n-1) , knapsack(WtAr,VAr,W,n-1))</a>
+</h3>
+<h3 class="topic">
+<a name="1fieuf3q9ui8h3p1ui9e6ne687">&nbsp;&nbsp;if(WAr[n-1]&gt;W</a>
+</h3>
+<h3 class="topic">
+<a name="47g35ur17ha7sk8208m449o25t">&nbsp;&nbsp;&nbsp;Retrun t[n][w]=knapsack(WtAr,VAr,W,n-1)</a>
+</h3>
+<h3 class="topic">
+<a name="6clargj4i6usr7u1ntr2sri1si">&nbsp;&nbsp;This is a top down approach</a>
+</h3>
+<h3 class="topic">
+<a name="3t37sv1r471md1o003ktv17g6f">&nbsp;&nbsp;&nbsp;Has same complexity as that of Bottom Up</a>
+</h3>
+<h3 class="topic">
+<a name="42v5gm75i9ft4snv0i9o4ftbec">&nbsp;&nbsp;Disadvantage</a>
+</h3>
+<h3 class="topic">
+<a name="55o39fe85q2fd4n84i27gs0ak7">&nbsp;&nbsp;&nbsp;it can cause stackoverflow&#13;
+due to multiple function call via recursion</a>
+</h3>
+<h3 class="topic">
+<a name="20ih4eejglopsk0klv66o06h94">&nbsp;Bottom Up</a>
+</h3>
+<h3 class="topic">
+<a name="1osvf37uos9sq4j3o3outkmn0g">&nbsp;&nbsp;no Recursion only Matrix is involved</a>
+</h3>
+<h3 class="topic">
+<a name="19gds6medsa93l5dp76un4re6b">&nbsp;&nbsp;initilisation&#13;
+just like we did&#13;
+base condition</a>
+</h3>
+<h3 class="topic">
+<a name="72e19h1f9o49nidrcgjid1f7eh">&nbsp;&nbsp;&nbsp;t[n+1][w+1]</a>
+</h3>
+<h3 class="topic">
+<a name="0jeg74sukm4k4kfmul5svlfqc0">&nbsp;&nbsp;&nbsp;for(int i,i&lt;w+1;i++)&#13;
+   for(int j, j&lt;n+1,j++)&#13;
+          t[i][j]=0</a>
+</h3>
+<h3 class="topic">
+<a name="251rffd2oh0nag2sgqs2740n7q">&nbsp;&nbsp;if(WtAr[n-1] &lt;=W]</a>
+</h3>
+<h3 class="topic">
+<a name="097kdesleiqkdrpsh0ehkdgt6e">&nbsp;&nbsp;&nbsp;t[n][w]=max(VAr(n-1) + t[n-1][W-WAr[n-1]], t[n-1][W])</a>
+</h3>
+<h3 class="topic">
+<a name="3kcsmr5r1v3e9p5n0f1qmafd2r">&nbsp;&nbsp;if(WtAr[n-1]&gt;W]</a>
+</h3>
+<h3 class="topic">
+<a name="6a5q0endkkk29233mhqdo1kb3i">&nbsp;&nbsp;&nbsp;t[n][w]=t[n-1][w]</a>
+</h3>
+<h3 class="topic">
+<a name="3o2q2vejcp8gna3c7buq6gvlq2">&nbsp;&nbsp;Return</a>
+</h3>
+<h3 class="topic">
+<a name="276v1c3ad91eh3hg7prlglpd54">&nbsp;&nbsp;&nbsp;t[n,w]</a>
+</h3>
+<h3 class="topic">
+<a name="6ee7jbuvj8db6oohenr37khqp6">&nbsp;&nbsp;The matrix intersection will have&#13;
+many sub answers at i,j</a>
+</h3>
+<h3 class="topic">
+<a name="18qjd29ou4vlm9l51rei54fviq">&nbsp;&nbsp;Will replace n w with i j</a>
+</h3>
+<h3 class="topic">
+<a name="774qce0d1m1dncc92i5e9msems">&nbsp;&nbsp;&nbsp;if(WtAr[i-1]&lt;=j)</a>
+</h3>
+<h3 class="topic">
+<a name="28qm9o4e2idpbj5lnn5bvn71pu">&nbsp;&nbsp;&nbsp;else</a>
+</h3>
+<h3 class="topic">
+<a name="57kgbc51918vr55e7mvfuj5d56">&nbsp;&nbsp;&nbsp;&nbsp;t[i][j]=t[i-1][j]</a>
+</h3>
+<h2 class="topic">
+<a name="1lts12s8mm1q2bu98vtkbvr5o5">Problems Categories</a>
+</h2>
+<h3 class="topic">
+<a name="77amrimrm8tpukoidmois3m8fm">&nbsp;Subset Sum Problem</a>
+</h3>
+<h3 class="topic">
+<a name="5h3kb0cgeuhum5eo4vmvmibrg8">&nbsp;Count of subset Sum</a>
+</h3>
+<h3 class="topic">
+<a name="7kle4dik60aob60jh6ilnot56e">&nbsp;Minimum Subset sum difff</a>
+</h3>
+<h3 class="topic">
+<a name="1kqpctnlc1ccbduld70nggr2jg">&nbsp;Equal Sum partition</a>
+</h3>
+<h3 class="topic">
+<a name="0dv4sfirsuu77522lp85agrrmv">&nbsp;Target sum</a>
+</h3>
+<h3 class="topic">
+<a name="3719hn8hji3s097jpqmga7b2ol">&nbsp;# of subset in given d/f</a>
+</h3>
+<h2 class="topic">
+<a name="78387bkskguap78unr1if0700n">subset problem </a>
+</h2>
+<h3 class="topic">
+<a name="1dukrt7pk4f813559it02c4a87">&nbsp;if a subset present whose sum&#13;
+is equal to input sum</a>
+</h3>
+<h3 class="topic">
+<a name="4fr354m22laaihbanm0eef0n6m">&nbsp;&nbsp;true</a>
+</h3>
+<h3 class="topic">
+<a name="7qnc3k7ev327s8jm7hv51kmuel">&nbsp;&nbsp;false</a>
+</h3>
+<h3 class="topic">
+<a name="2s74qgcmh17eu7s5hg9q5n2uuj">&nbsp;Since we have a choice &#13;
+and we have to take or not </a>
+</h3>
+<h3 class="topic">
+<a name="2t1rb91heme00ooa45iae119ka">&nbsp;Initialisation</a>
+</h3>
+<h3 class="topic">
+<a name="4eb3lt727vm2b4imshbbnk6tjm">&nbsp;&nbsp;i==0</a>
+</h3>
+<h3 class="topic">
+<a name="6ts2gokf12r1odvva72tbbstjm">&nbsp;&nbsp;&nbsp;if Array Empty and sum &gt;0&#13;
+its not possilble</a>
+</h3>
+<h3 class="topic">
+<a name="2h5b28obabavidgseadsvvubf3">&nbsp;&nbsp;&nbsp;Make it False</a>
+</h3>
+<h3 class="topic">
+<a name="7i6upcsf4dfh93np23mss1gp0r">&nbsp;&nbsp;j==0</a>
+</h3>
+<h3 class="topic">
+<a name="087otsa1pd92rdq0svcmqsdg0o">&nbsp;&nbsp;&nbsp;True</a>
+</h3>
+<h3 class="topic">
+<a name="48mb270hmqoovv0i5gtg8ud2k3">&nbsp;&nbsp;&nbsp;Since sum==0 possible&#13;
+with empty set</a>
+</h3>
+<h3 class="topic">
+<a name="6be3mliu4rhdstv884lb97qnk2">&nbsp;&nbsp;&nbsp;we write this later to make F to T &#13;
+for 0,0</a>
+</h3>
+<h3 class="topic">
+<a name="41si9b3fifdb05t69dt0ov0fh4">&nbsp;&nbsp;you have to think more for i==0 and j==0</a>
+</h3>
+<h3 class="topic">
+<a name="74ds4ik1fb7muboib11rc0pfs5">&nbsp;code Variation</a>
+</h3>
+<h3 class="topic">
+<a name="1gg6s0squgic3nncel0fmgmkbt">&nbsp;&nbsp;here we dont want to give max&#13;
+but true false. so max cant be used</a>
+</h3>
+<h3 class="topic">
+<a name="2h1df5rmveovmi4fd4097rar5r">&nbsp;&nbsp;if(wtArr[i-1]&lt;=j)</a>
+</h3>
+<h3 class="topic">
+<a name="6ual2ehuc3megl16jr8kf3gmjh">&nbsp;&nbsp;&nbsp;t[i][j]= t[i-1][j-wtAr[i-1] || t[i-1][j]</a>
+</h3>
+<h3 class="topic">
+<a name="26b3obqhd9p8q18a1j460ncl0h">&nbsp;&nbsp;else</a>
+</h3>
+<h3 class="topic">
+<a name="282hv9gugfkfqnp65kp2hcj7fc">&nbsp;&nbsp;&nbsp;t[i][j]=t[i-1][j]</a>
+</h3>
+<h3 class="topic">
+<a name="58kd1g0dsck1jmn5v5ifuo2jnk">&nbsp;&nbsp;Since there is no value array</a>
+</h3>
+<h3 class="topic">
+<a name="0vtml23oat599av2k4kbdael6g">&nbsp;&nbsp;&nbsp;ignore Val[i-1]</a>
+</h3>
+<h3 class="topic">
+<a name="4i6iul1hi9ion55fs8ssbs1461">&nbsp;&nbsp;return t[n][sum]</a>
+</h3>
+<h2 class="topic">
+<a name="47vbd891no4ifj1667e4lpisq0">Approach</a>
+</h2>
+<h3 class="topic">
+<a name="6krr6hvbhk7lcsl4d5b1jm8f9d">&nbsp;Problem statement</a>
+</h3>
+<h3 class="topic">
+<a name="4of84mp9ffp6nlgbtjb1upufj2">&nbsp;&nbsp;input</a>
+</h3>
+<h3 class="topic">
+<a name="3fcn5v3ipgf5t289c3g5394vvv">&nbsp;&nbsp;output</a>
+</h3>
+<h3 class="topic">
+<a name="70r4ch3niir2ghal08hmvm8eqi">&nbsp;Similarity</a>
+</h3>
+<h3 class="topic">
+<a name="0qlmhul81j5jooiqkvipa13q45">&nbsp;Code Variation</a>
+</h3>
+<h3 class="topic">
+<a name="70hltj5dhplalmgfmh0lgrel4o">&nbsp;&nbsp;Initialisation</a>
+</h3>
+<h3 class="topic">
+<a name="60nr9uhkqkk6enad0o1jqh3v2q">&nbsp;&nbsp;Code change to base code</a>
+</h3>
+<h3 class="topic">
+<a name="4antv7a5ase0suei641rc1cgd9">&nbsp;Return type</a>
+</h3>
+<h2 class="topic">
+<a name="00j964dbje36j3h3duif702a5i">Equal Sum parition</a>
+</h2>
+<h3 class="topic">
+<a name="6aomhsrhpq3103obt6m8el0vgk">&nbsp;can the array be divided into&#13;
+2 equal partition</a>
+</h3>
+<h3 class="topic">
+<a name="5cqsns382e3fbn8nees16n121a">&nbsp;&nbsp;P1</a>
+</h3>
+<h3 class="topic">
+<a name="7qdtnlvuunjota7725vsn2kt6m">&nbsp;&nbsp;P2</a>
+</h3>
+<h3 class="topic">
+<a name="2a3i7a3ejld5fa4ok4gcfg6eq7">&nbsp;P1+P2=sum</a>
+</h3>
+<h3 class="topic">
+<a name="3b427dphvvq5e702na3q625476">&nbsp;&nbsp;true</a>
+</h3>
+<h3 class="topic">
+<a name="4mba8uocr9nvcoqt8cfis7ka8g">&nbsp;&nbsp;false</a>
+</h3>
+<h3 class="topic">
+<a name="73mp7od890o8i8frif4iu3ir41">&nbsp;&nbsp;means</a>
+</h3>
+<h3 class="topic">
+<a name="7usmu5hpcin3qd8842r77cd00a">&nbsp;&nbsp;&nbsp;s+s = 2s ; </a>
+</h3>
+<h3 class="topic">
+<a name="0q9f3dlptjcqde4ecc5v3cukmv">&nbsp;&nbsp;&nbsp;11+11=2*11</a>
+</h3>
+<h3 class="topic">
+<a name="14akms5jdhg8dmp1vtqrf2khlc">&nbsp;&nbsp;&nbsp;if its even, it can be &#13;
+divided into 2</a>
+</h3>
+<h3 class="topic">
+<a name="1sms8n0m9m6stgu9rh8esp1cfv">&nbsp;&nbsp;&nbsp;if odd, not possible&#13;
+equal partition</a>
+</h3>
+<h3 class="topic">
+<a name="306g1133mq7kd1r6v6dmj75f5a">&nbsp;Take the sum of Array</a>
+</h3>
+<h3 class="topic">
+<a name="3auagqh6dgnb2qum2engin2jfi">&nbsp;&nbsp;check if </a>
+</h3>
+<h3 class="topic">
+<a name="1sh1dtvro75jdg18o88akjd2o7">&nbsp;&nbsp;&nbsp;Odd</a>
+</h3>
+<h3 class="topic">
+<a name="1o7dtblcmf9vbvihp6rafrkicf">&nbsp;&nbsp;&nbsp;&nbsp;not possible</a>
+</h3>
+<h3 class="topic">
+<a name="7m3uaqum1r2bc0e4h046nj1mkc">&nbsp;&nbsp;&nbsp;Even</a>
+</h3>
+<h3 class="topic">
+<a name="1g2avvl3kdlua380tj750igl6v">&nbsp;&nbsp;&nbsp;&nbsp;call subset function with sum/2</a>
+</h3>
+<h3 class="topic">
+<a name="01n2kism9ddkunbbes1h1a1kjs">&nbsp;Problem reduced to subset Existence problem</a>
+</h3>
+<h2 class="topic">
+<a name="2e0gcnsvr9thhk0f6kd0jh724d">Count of Subset Sum</a>
+</h2>
+<h3 class="topic">
+<a name="44tjjt294ebco640sitcorue4l">&nbsp;Count the number&#13;
+of subsets present which has this sum</a>
+</h3>
+<h3 class="topic">
+<a name="438mrebdpgu0a0t9q0vjpatmks">&nbsp;initialisation</a>
+</h3>
+<h3 class="topic">
+<a name="6pvdh1k3mmbsh3gc8gh484c3pc">&nbsp;&nbsp;intialise i=0 with 0 instead of false</a>
+</h3>
+<h3 class="topic">
+<a name="1j3fqpvjqmnapi7a4kll4lc8i3">&nbsp;&nbsp;initialise j=1 instead of true </a>
+</h3>
+<h3 class="topic">
+<a name="0fb74um4l6beg3juiugqrg0tom">&nbsp;Code variation</a>
+</h3>
+<h3 class="topic">
+<a name="5m2o0vmh6us2ihkkoo29aee2hs">&nbsp;&nbsp;just replace || with + to get the count</a>
+</h3>
+<h2 class="topic">
+<a name="391q5qujlocqafcbal6ivn4f1v">Minimum Subset Sum difference</a>
+</h2>
+<h3 class="topic">
+<a name="6q3vmidteg2mhhveemdcvj128u">&nbsp;define</a>
+</h3>
+<h3 class="topic">
+<a name="6tttsn10r0ce2dini63848phae">&nbsp;&nbsp;{1,3,5}</a>
+</h3>
+<h3 class="topic">
+<a name="2v9saap9q8me7791v0tuumn7pv">&nbsp;&nbsp;&nbsp;{13}{5}</a>
+</h3>
+<h3 class="topic">
+<a name="4mjl6rd6cseboppq202sr6qkca">&nbsp;&nbsp;&nbsp;&nbsp;5-4</a>
+</h3>
+<h3 class="topic">
+<a name="3qj75uj087i0revtejjm1cr13l">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</a>
+</h3>
+<h3 class="topic">
+<a name="2j92neh450jq0nk184dr41t0ku">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;minimum</a>
+</h3>
+<h3 class="topic">
+<a name="45jbgg9cbdlcnlhet7kmf0geaf">&nbsp;&nbsp;&nbsp;{1,5}{3}</a>
+</h3>
+<h3 class="topic">
+<a name="478o7imh1g36jp63mp5j5mk597">&nbsp;&nbsp;&nbsp;&nbsp;6-3</a>
+</h3>
+<h3 class="topic">
+<a name="4ljmnivd650p1emh1ht9qc1cuk">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</a>
+</h3>
+<h3 class="topic">
+<a name="4rh7g935q8fnf9bpccllgj9j9e">&nbsp;&nbsp;&nbsp;{5,3}{1}</a>
+</h3>
+<h3 class="topic">
+<a name="5mdhjvejsnpo64bb32hk9ub5tm">&nbsp;&nbsp;&nbsp;&nbsp;8-1</a>
+</h3>
+<h3 class="topic">
+<a name="28i43fqtfeibgjced8chfip8qv">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</a>
+</h3>
+<h3 class="topic">
+<a name="3tq88gn34c172g2n5644k8plkf">&nbsp;&nbsp;Find a set such that&#13;
+if P1-P2=Minimum difference</a>
+</h3>
+<h3 class="topic">
+<a name="7s53i5nt5edico8g8eri94iblp">&nbsp;Approach</a>
+</h3>
+<h3 class="topic">
+<a name="004a0d27mmv4kvdackb9l3amcn">&nbsp;&nbsp;S1-S2=Range</a>
+</h3>
+<h3 class="topic">
+<a name="0g22lfa4fbvcv8l63kpjdue3o5">&nbsp;&nbsp;Range</a>
+</h3>
+<h3 class="topic">
+<a name="5n6qj0mbrsq7ld5pnrvi7lsatt">&nbsp;&nbsp;&nbsp;difference that can exist</a>
+</h3>
+<h3 class="topic">
+<a name="3gmls7636od3u4spcspvqd3llu">&nbsp;&nbsp;&nbsp;1 2 3 4 5 6 7 8 9</a>
+</h3>
+<h3 class="topic">
+<a name="3pc3v9pprnoes5mqne72iembbr">&nbsp;&nbsp;&nbsp;Some of these cannot form&#13;
+a subset such as 2,7</a>
+</h3>
+<h3 class="topic">
+<a name="72tdujd36oj21dlqilb9e5ei4t">&nbsp;&nbsp;S2 = Range - S1</a>
+</h3>
+<h3 class="topic">
+<a name="5tv07araic0l0nqcj2tgj53j2n">&nbsp;&nbsp;So minimum difference</a>
+</h3>
+<h3 class="topic">
+<a name="0k3bma1digr6vu4sp3ijefafm4">&nbsp;&nbsp;&nbsp;Range - 2S1</a>
+</h3>
+<h3 class="topic">
+<a name="0tmmll83tp5vme7he0bnlpfqhn">&nbsp;&nbsp;Make sure S1 is only in half&#13;
+portio of range</a>
+</h3>
+<h3 class="topic">
+<a name="5c60le0ogumovio8n03tchojoe">&nbsp;&nbsp;&nbsp;so 9/2 till 4</a>
+</h3>
+<h3 class="topic">
+<a name="784uhoqjpcsnegqebn784a9j55">&nbsp;&nbsp;&nbsp;This will make&#13;
+sure S1 will always be smaller&#13;
+and we don't need absolute</a>
+</h3>
+<h3 class="topic">
+<a name="21igfcaj5m3gl90bllmktgau9f">&nbsp;&nbsp;Last line of t[n+1][W+1]</a>
+</h3>
+<h3 class="topic">
+<a name="5148pd7idme6vct512r1cti57j">&nbsp;&nbsp;&nbsp;This will have</a>
+</h3>
+<h3 class="topic">
+<a name="714tjan5cs7bbnsdom1voi479s">&nbsp;&nbsp;&nbsp;&nbsp;true</a>
+</h3>
+<h3 class="topic">
+<a name="3ut283f04a918st33ifvvcugg9">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If difference&#13;
+ is possible</a>
+</h3>
+<h3 class="topic">
+<a name="4c4tp7mg3dgbr7bns8rtlpoo8c">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,3,4,5,6,8,9</a>
+</h3>
+<h3 class="topic">
+<a name="7a602al60bg7g0h1hsofc1h94i">&nbsp;&nbsp;&nbsp;&nbsp;false</a>
+</h3>
+<h3 class="topic">
+<a name="5mqab8vdjk35ooreqh9afdi6kj">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if difference &#13;
+is not possible</a>
+</h3>
+<h3 class="topic">
+<a name="03v8dmpn3gmmjkrrbovc815qdh">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2,7</a>
+</h3>
+<h3 class="topic">
+<a name="69spa7mguo5sret4b0do2212af">&nbsp;&nbsp;Now we can take minimum of &#13;
+(Range - 2S1)</a>
+</h3>
+<h3 class="topic">
+<a name="0s5c520evksi9c1n94f68snjqi">&nbsp;&nbsp;&nbsp;9-2(1)</a>
+</h3>
+<h3 class="topic">
+<a name="51t5jp75ie0mn5fq0lmccjuvep">&nbsp;&nbsp;&nbsp;&nbsp;7</a>
+</h3>
+<h3 class="topic">
+<a name="0e8hhpohb8jij9holrf7fkpdh7">&nbsp;&nbsp;&nbsp;9-2(3)</a>
+</h3>
+<h3 class="topic">
+<a name="4uducv7d2vs4mm4hbfpbm04ar3">&nbsp;&nbsp;&nbsp;&nbsp;6</a>
+</h3>
+<h3 class="topic">
+<a name="1fuok2jnqv6efvr56i3nog2fuo">&nbsp;&nbsp;&nbsp;9-2(4)</a>
+</h3>
+<h3 class="topic">
+<a name="5fc2v6eu5c67fkvjqupsasgb7l">&nbsp;&nbsp;&nbsp;&nbsp;1</a>
+</h3>
+<h2 class="topic">
+<a name="69m5cl2656ogf4qkimi2e448l0">Count the number of subset &#13;
+with given difference</a>
+</h2>
+<h3 class="topic">
+<a name="1173lao1ofs738d3a91o8gus43">&nbsp;define</a>
+</h3>
+<h3 class="topic">
+<a name="32i714iram5n6lhh2m0lnb4hqt">&nbsp;&nbsp;{1,1,3,4}&#13;
+difference 1</a>
+</h3>
+<h3 class="topic">
+<a name="1h72re37529ktb78bgm5bbv2lt">&nbsp;&nbsp;&nbsp;{1,3,1}{4}</a>
+</h3>
+<h3 class="topic">
+<a name="4m37384ntjvcf855e2ejoh0mu5">&nbsp;&nbsp;&nbsp;{1,4}{1,3}</a>
+</h3>
+<h3 class="topic">
+<a name="4tl7kcass5uc1poeimpks2eu24">&nbsp;&nbsp;&nbsp;{1,3}{1,4}</a>
+</h3>
+<h3 class="topic">
+<a name="5fbcp3prmao79scu5k2ij6kae7">&nbsp;&nbsp;&nbsp;Total 3 sets</a>
+</h3>
+<h3 class="topic">
+<a name="02enji18tubp54gnndmp1ch07u">&nbsp;Approach</a>
+</h3>
+<h3 class="topic">
+<a name="6jahp9nniv8r9inqut7ibestrk">&nbsp;&nbsp;here Difference is given&#13;
+unlike we have to minimise it</a>
+</h3>
+<h3 class="topic">
+<a name="2utboh7i5khr3565p112j4fjnu">&nbsp;&nbsp;&nbsp;Which we did in &#13;
+minimum subset problem</a>
+</h3>
+<h3 class="topic">
+<a name="7icipv0fhh5cv4ig60vpcpr30p">&nbsp;&nbsp;S1-S2 = Difference</a>
+</h3>
+<h3 class="topic">
+<a name="2u2mut4pe9v2bkca7e8dd202mk">&nbsp;&nbsp;S1+S2=Sum</a>
+</h3>
+<h3 class="topic">
+<a name="1pbnb6vfcp9bvboerddgqenvrs">&nbsp;&nbsp;S1 = (1+9)/2</a>
+</h3>
+<h3 class="topic">
+<a name="0llj8s8fjeqv7aksqcgoadhf0u">&nbsp;&nbsp;&nbsp;5</a>
+</h3>
+<h3 class="topic">
+<a name="7ljde95fgnqq5j32evkr9mt6mk">&nbsp;&nbsp;We have to find those&#13;
+subset whose sum is 5</a>
+</h3>
+<h3 class="topic">
+<a name="7rs18b359jnu5mejme3gq2vh50">&nbsp;&nbsp;&nbsp;So it becomes &#13;
+problem of subset</a>
+</h3>
+<h2 class="topic">
+<a name="20inr0fd4570grvkvooclurlk2">Target Sum</a>
+</h2>
+<h3 class="topic">
+<a name="5g9q7qnud30ier0mirntplbip6">&nbsp;Define</a>
+</h3>
+<h3 class="topic">
+<a name="1c1e4hvng3qa39ejn40n84aqvo">&nbsp;&nbsp;{1,1,3,4}&#13;
+1</a>
+</h3>
+<h3 class="topic">
+<a name="3gic3hkfh4prcatnhrpkicmsee">&nbsp;&nbsp;&nbsp;Use +/- such that sum &#13;
+is given(1)</a>
+</h3>
+<h3 class="topic">
+<a name="280dnb7sck9d9f1ovptocdjjvi">&nbsp;&nbsp;&nbsp;+1-1-3+4</a>
+</h3>
+<h3 class="topic">
+<a name="21ke2iesj0qhjeocsmr5g0dmmm">&nbsp;&nbsp;&nbsp;&nbsp;1</a>
+</h3>
+<h3 class="topic">
+<a name="535762lgfbopbtnj4agt14jnvq">&nbsp;&nbsp;&nbsp;-1+1-3+4</a>
+</h3>
+<h3 class="topic">
+<a name="4tiqo392rg0qbf8bj4epc7hk01">&nbsp;&nbsp;&nbsp;&nbsp;1</a>
+</h3>
+<h3 class="topic">
+<a name="623t2gh1rl6prfutjdgq9p7m35">&nbsp;&nbsp;&nbsp;1+1+3-4</a>
+</h3>
+<h3 class="topic">
+<a name="5krpfj48n9h9jig3jb2221igj2">&nbsp;&nbsp;&nbsp;&nbsp;1</a>
+</h3>
+<h3 class="topic">
+<a name="0u6u5jqne2ligha0tgcbbeo1eq">&nbsp;Approach</a>
+</h3>
+<h3 class="topic">
+<a name="53vc1mbhbt00i6m4tc83bqrcj9">&nbsp;&nbsp;we are just creating &#13;
+two sets</a>
+</h3>
+<h3 class="topic">
+<a name="2d1i75sq88j7eb4egviajll3js">&nbsp;&nbsp;&nbsp;positive set</a>
+</h3>
+<h3 class="topic">
+<a name="1jhp0qg8vnoopm5qil4vjkugjp">&nbsp;&nbsp;&nbsp;Negative Set</a>
+</h3>
+<h3 class="topic">
+<a name="1hiqj5a08ccg96pg5koph2hsf4">&nbsp;&nbsp;Positive Set - Negative Set = Sum</a>
+</h3>
+<h3 class="topic">
+<a name="11pte6ifhqssvv1m70tddniuld">&nbsp;&nbsp;So there is choice to create subsets</a>
+</h3>
+<h3 class="topic">
+<a name="4hiberbq7259ahfu6ibva1ja48">&nbsp;&nbsp;&nbsp;(1,4) - (1,3)</a>
+</h3>
+<h3 class="topic">
+<a name="5nb1tbpgtn8sa1vv8i5c6hkknf">&nbsp;&nbsp;&nbsp;(1,1,3) - (4)</a>
+</h3>
+<h3 class="topic">
+<a name="51meup2rb8g1prfsmepp52uj0a">&nbsp;&nbsp;&nbsp;(1,4)-(1,3)&#13;
+Used another 1</a>
+</h3>
+<h3 class="topic">
+<a name="5g9425tgjtb158ok72f3cpflpa">&nbsp;&nbsp;Positive Set+negative Set=Range(sum)</a>
+</h3>
+<h3 class="topic">
+<a name="26ge3a9087mdu26ggn7d9rn00q">&nbsp;&nbsp;positive set = (target Sum+Range(sum) )/2</a>
+</h3>
+<h3 class="topic">
+<a name="5urth1ibo0fh7ei1hll0ggm06f">&nbsp;&nbsp;&nbsp;(1+9)/2=5</a>
+</h3>
+<h3 class="topic">
+<a name="4s4n2b6esb57qoffobct1eeae2">&nbsp;&nbsp;So negative set = 5-1 =4</a>
+</h3>
+<h3 class="topic">
+<a name="05s8uo6ojhi2gnmf6vll58ms9s">&nbsp;&nbsp;Just check how many of subset&#13;
+can form 5 (positive subset)</a>
+</h3>
+<h3 class="topic">
+<a name="3htcm04lbvb7fe98cncimkefrm">&nbsp;&nbsp;&nbsp;(1,4)</a>
+</h3>
+<h3 class="topic">
+<a name="4ure88365a3fi9pt1n5cuon6i1">&nbsp;&nbsp;&nbsp;(1,1,3)</a>
+</h3>
+<h3 class="topic">
+<a name="67min6hb10v4qonp47a7oo1b36">&nbsp;&nbsp;&nbsp;(4,1)</a>
+</h3>
+<h3 class="topic">
+<a name="0l4oe5ms54rej3kq6v3njkba3q">&nbsp;&nbsp;So we reduced this&#13;
+problem to count &#13;
+of subset problem</a>
+</h3>
+<h2 class="topic">
+<a name="3tl25thjmdcv5c89n8airtn3he">Based on </a>
+</h2>
+<h3 class="topic">
+<a name="2ulq9aham8eeas5ee8978ka5e5">&nbsp;Aditya Verma&#13;
+Youtube Channel</a>
+</h3>
+</body>
+</html>
