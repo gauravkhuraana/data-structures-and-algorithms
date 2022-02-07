@@ -1,0 +1,265 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>Unbounded knapsack</title>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="2k8op7ocaeun4dop296ca1hfdr">Unbounded knapsack</a>
+</h1>
+<div align="center" class="globalOverview">
+<img src="Unbounded knapsack_files/images/Unbounded knapsack.jpg"></div>
+<h2 class="topic">
+<a name="1eb7gb7j538tv6kfb6cj90q470">difference</a>
+</h2>
+<h3 class="topic">
+<a name="0q6qq4tuh200gcknade2r2j2d4">&nbsp;an item can be taken more than&#13;
+once</a>
+</h3>
+<h3 class="topic">
+<a name="3g70r5c0mvkrqj4bp1b7mp0lls">&nbsp;Either you dont take an item</a>
+</h3>
+<h3 class="topic">
+<a name="2n3innbpqm6oqljq3b0cmgg8ic">&nbsp;if you decide to take it&#13;
+you can wait to decide </a>
+</h3>
+<h3 class="topic">
+<a name="3puhsj84ebm0a4in6m13r7mab3">&nbsp;&nbsp;because you may need&#13;
+it again</a>
+</h3>
+<h2 class="topic">
+<a name="62tevrlred6nov5nk9er4g7gfc">Rod Cutting</a>
+</h2>
+<h3 class="topic">
+<a name="6197eab4c95j1gpleptlop7aqv">&nbsp;def</a>
+</h3>
+<h3 class="topic">
+<a name="4qjpg4iadbeb07cib6pdtd4dv6">&nbsp;&nbsp;CutArray</a>
+</h3>
+<h3 class="topic">
+<a name="33av58otd12ggekjb772p29k7t">&nbsp;&nbsp;&nbsp;what's the length&#13;
+of cut to be applied</a>
+</h3>
+<h3 class="topic">
+<a name="6fg2sr3075igav791sglvjc21f">&nbsp;&nbsp;ValArray</a>
+</h3>
+<h3 class="topic">
+<a name="78r5qgaj59a95s6t9tnsi0c38i">&nbsp;&nbsp;&nbsp;How much Each cut &#13;
+will cost you </a>
+</h3>
+<h3 class="topic">
+<a name="7rrmiuvbacb9f49qde5d1rqdb1">&nbsp;&nbsp;Length</a>
+</h3>
+<h3 class="topic">
+<a name="6iv4bvmtdspm2mo16v86h1s2lk">&nbsp;&nbsp;&nbsp;Length of the &#13;
+rod to be cut</a>
+</h3>
+<h3 class="topic">
+<a name="18c36mdk8va61dakr2q0ooo6q7">&nbsp;&nbsp;objective</a>
+</h3>
+<h3 class="topic">
+<a name="2p65sjpsjnp8goof28k95uimdf">&nbsp;&nbsp;&nbsp;To get maximum &#13;
+profit</a>
+</h3>
+<h3 class="topic">
+<a name="2ptaenrrolh73ig1g3a8udqne2">&nbsp;logic</a>
+</h3>
+<h3 class="topic">
+<a name="769qf8pq8aqhd1tsntdk1jldis">&nbsp;&nbsp;initialisation</a>
+</h3>
+<h3 class="topic">
+<a name="018erdkrvm5ju59t5cktc8nngb">&nbsp;&nbsp;&nbsp;0</a>
+</h3>
+<h3 class="topic">
+<a name="4p8shhk96ngr7f7o469rnh2oa7">&nbsp;&nbsp;&nbsp;&nbsp;if length is 0</a>
+</h3>
+<h3 class="topic">
+<a name="49ho5r97u1gr1o28oknrvas1l4">&nbsp;&nbsp;&nbsp;&nbsp;if value array is 0</a>
+</h3>
+<h3 class="topic">
+<a name="65r4mjf4l1rqd2skq9sruo66up">&nbsp;&nbsp;Main logic</a>
+</h3>
+<h3 class="topic">
+<a name="6fj59nsbb961pmqe06g6m4ltp2">&nbsp;&nbsp;&nbsp;if(cutArray[i-1]&lt;=j)</a>
+</h3>
+<h3 class="topic">
+<a name="3evsgrvh2it9ccc5o7ghdaip33">&nbsp;&nbsp;&nbsp;&nbsp;t[i][j]=Math.max(Val[i-1]+t[i][j-cut[i-1]], &#13;
+t[i-1][j])</a>
+</h3>
+<h3 class="topic">
+<a name="52uhut5bgoec1ukl8vklhgesto">&nbsp;&nbsp;&nbsp;&nbsp;The only difference with 0/1 knapsack &#13;
+here is the t[i] instead of t[i-1]</a>
+</h3>
+<h3 class="topic">
+<a name="6i62154s270tigfibhcjsqbsi0">&nbsp;&nbsp;&nbsp;else</a>
+</h3>
+<h3 class="topic">
+<a name="27rh2os6oe2sq5qiuckojg34sj">&nbsp;&nbsp;&nbsp;&nbsp;t[i][j]=t[i-1][j]</a>
+</h3>
+<h2 class="topic">
+<a name="6teqin9shg0ok12oshto9rr5rm">Coin change&#13;
+Max Ways</a>
+</h2>
+<h3 class="topic">
+<a name="7nukj0ojo24omk24vk7i1q764q">&nbsp;def</a>
+</h3>
+<h3 class="topic">
+<a name="5j9kmq5hk5rdf5ganneigna19f">&nbsp;&nbsp;CoinArray</a>
+</h3>
+<h3 class="topic">
+<a name="2ur4vct2h1ca8q58f25o19crmj">&nbsp;&nbsp;&nbsp;Available coins</a>
+</h3>
+<h3 class="topic">
+<a name="1aatiqk3s2nmo25onmhbics7t9">&nbsp;&nbsp;&nbsp;&nbsp;{1,2,3}</a>
+</h3>
+<h3 class="topic">
+<a name="0udfihtscjecna60if2qrrhakt">&nbsp;&nbsp;Sum</a>
+</h3>
+<h3 class="topic">
+<a name="2drnrf055oq4ugokr0tbf89klk">&nbsp;&nbsp;&nbsp;The number of ways&#13;
+to achieve the sum</a>
+</h3>
+<h3 class="topic">
+<a name="2a0s3fi2sm1oqvhi4m2ur308r7">&nbsp;&nbsp;&nbsp;&nbsp;{5}</a>
+</h3>
+<h3 class="topic">
+<a name="6q4idc1f9gpgp8c8bj7fb696l6">&nbsp;&nbsp;objective</a>
+</h3>
+<h3 class="topic">
+<a name="7bfe1g2h91igkmpj480ec88q6k">&nbsp;&nbsp;&nbsp;Maximum number of&#13;
+ways to achive the output(sum)</a>
+</h3>
+<h3 class="topic">
+<a name="65huno46gs4bc55t06prcb2d5u">&nbsp;&nbsp;&nbsp;{1,1,1,1,1}&#13;
+{1,1,1,2}&#13;
+{1,2,2}&#13;
+{1,1,3}&#13;
+{2,3}</a>
+</h3>
+<h3 class="topic">
+<a name="3vqco7krp4tu5lqe2pkvtshdje">&nbsp;initialisation</a>
+</h3>
+<h3 class="topic">
+<a name="5jhvl85n0hm82gjqp1f0ppi9ip">&nbsp;&nbsp;when i=0,sum&gt;0&#13;
+0</a>
+</h3>
+<h3 class="topic">
+<a name="3ktskdsficm25jnqko900dqbu9">&nbsp;&nbsp;When sum=0,number of items more&#13;
+then empty set possibility (1)</a>
+</h3>
+<h3 class="topic">
+<a name="40d1se3mn10df9cp3nbfsrc3ne">&nbsp;Code Variation</a>
+</h3>
+<h3 class="topic">
+<a name="5iua74di2rlbtgq82adj6bcs5n">&nbsp;&nbsp;if(coinAr[i-1]&lt;=J</a>
+</h3>
+<h3 class="topic">
+<a name="5po967j3nkg4rbg5c9921alslp">&nbsp;&nbsp;&nbsp;t[i][j]=t[i][j-CoinAr[i-1][j]+t[i-1][j]</a>
+</h3>
+<h3 class="topic">
+<a name="0efg0ss2gli4femtjc243s1ksv">&nbsp;&nbsp;&nbsp;t[i] because its&#13;
+unbounded knapsack</a>
+</h3>
+<h3 class="topic">
+<a name="131pvcn59r9qe88rr4qfkrluhs">&nbsp;&nbsp;else</a>
+</h3>
+<h3 class="topic">
+<a name="6om15egpdhbja8aecqf1g45shb">&nbsp;&nbsp;&nbsp;t[i][j]=t[i-1][j]</a>
+</h3>
+<h3 class="topic">
+<a name="1imjdn6ctiihru4l9mue6omj90">&nbsp;return</a>
+</h3>
+<h3 class="topic">
+<a name="2e2sbgm7faecj9lvkgdc3e8dkq">&nbsp;&nbsp;t[n][sum]</a>
+</h3>
+<h2 class="topic">
+<a name="4j38k4djbdflkgm9hf6e9e1vf2">Coin Change&#13;
+Min coins</a>
+</h2>
+<h3 class="topic">
+<a name="1686uh7mcgron855tvn0o394tr">&nbsp;def</a>
+</h3>
+<h3 class="topic">
+<a name="52emgfcr1u42hh23bh21f76f5o">&nbsp;&nbsp;coinAr</a>
+</h3>
+<h3 class="topic">
+<a name="088pg8q9lo0beqajhj82bkfaho">&nbsp;&nbsp;&nbsp;{1,2,3,5}</a>
+</h3>
+<h3 class="topic">
+<a name="7kdau1mgev3ef5fbg23oedefql">&nbsp;&nbsp;Sum</a>
+</h3>
+<h3 class="topic">
+<a name="0i1rrljt3blok04tjug3rm80gi">&nbsp;&nbsp;&nbsp;3</a>
+</h3>
+<h3 class="topic">
+<a name="6fgd7mk6tnm98ha6g0tku6r509">&nbsp;&nbsp;objective</a>
+</h3>
+<h3 class="topic">
+<a name="2jdg14g5vqdvdaihbi1e9c23rf">&nbsp;&nbsp;&nbsp;Min number of coin&#13;
+needed to achieve the sum</a>
+</h3>
+<h3 class="topic">
+<a name="5ddtr4hsh8hssta4s4gjomjhj0">&nbsp;initilisation</a>
+</h3>
+<h3 class="topic">
+<a name="2g17ucrhuafon422m6lem4qalo">&nbsp;&nbsp;if(j==0) sum==0&#13;
+then no coin can result in 0</a>
+</h3>
+<h3 class="topic">
+<a name="5t2rt3co3ki52vja03dapeh5to">&nbsp;&nbsp; if no coins are present(i==0)&#13;
+then to achieve a sum we need infinite coins&#13;
+t[i][j]=inte.MaxValue-1</a>
+</h3>
+<h3 class="topic">
+<a name="413n47m869mouo78o59o893g57">&nbsp;&nbsp;Also we need initialisation for i=1</a>
+</h3>
+<h3 class="topic">
+<a name="32fg91o8p696a365omr2sh0ddb">&nbsp;&nbsp;if j%coinAr[0]==0</a>
+</h3>
+<h3 class="topic">
+<a name="6lvepr38qrd13bokj1u24pembn">&nbsp;&nbsp;&nbsp;t[i][j]=j/coinAr[0]</a>
+</h3>
+<h3 class="topic">
+<a name="5ie6pir78ovilgk0v3oq3ki679">&nbsp;&nbsp;else</a>
+</h3>
+<h3 class="topic">
+<a name="1adj5t7d7cvqi4vm9oupleqdsd">&nbsp;&nbsp;&nbsp;t[i][j]=int.maxValue-1</a>
+</h3>
+<h3 class="topic">
+<a name="7o2v6h8l04bn05pvlgqpf7v412">&nbsp;Code Variation</a>
+</h3>
+<h3 class="topic">
+<a name="6mqm77u6g3o2533prr7k3qpbon">&nbsp;&nbsp;loop will run from &#13;
+i==2 and j=1</a>
+</h3>
+<h3 class="topic">
+<a name="1i6clecsl0adqtcnie0b2ne6vd">&nbsp;&nbsp;&nbsp;we already &#13;
+did initialisation&#13;
+for i==1</a>
+</h3>
+<h3 class="topic">
+<a name="1179a430fa4h3mpm9p7kt9d0ej">&nbsp;&nbsp;if(coinAr[i-1]&lt;=j</a>
+</h3>
+<h3 class="topic">
+<a name="4j9jbbghajf1snsp2e7g43c1h5">&nbsp;&nbsp;&nbsp;t[i][j]=Math.min(1+t[i][j-coinAr[i-1],t[i-1][j])</a>
+</h3>
+<h3 class="topic">
+<a name="68vreebuvbi139pi7q8nfk9jei">&nbsp;&nbsp;&nbsp;This 1+ is the reason&#13;
+we took Int.Max-1</a>
+</h3>
+<h3 class="topic">
+<a name="02kkqvbg3i4l2ilc2knur6u198">&nbsp;&nbsp;else</a>
+</h3>
+<h3 class="topic">
+<a name="3sh3lcmuomcqvnbptrmlbm6r3q">&nbsp;&nbsp;&nbsp;t[i][j]=t[i-1][j]</a>
+</h3>
+<h3 class="topic">
+<a name="4qussf7u8k812gc2n9sogh3e39">&nbsp;&nbsp;return</a>
+</h3>
+<h3 class="topic">
+<a name="31kndogmcnn9i3mcd9i84vpi0j">&nbsp;&nbsp;&nbsp;t[n][sum]</a>
+</h3>
+</body>
+</html>
