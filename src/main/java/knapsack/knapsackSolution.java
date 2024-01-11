@@ -1,9 +1,7 @@
 package knapsack;
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 
-import static jdk.nashorn.internal.objects.NativeMath.max;
 
 public class knapsackSolution {
 

@@ -1,6 +1,5 @@
 package knapsack;
 
-import com.sun.deploy.security.SelectableSecurityManager;
 
 public class equalPartition {
 

@@ -1,6 +1,5 @@
 package knapsack.unbounded;
 
-import com.sun.deploy.security.SelectableSecurityManager;
 
 public class coinChange_minimumNbrOfCoins {
 

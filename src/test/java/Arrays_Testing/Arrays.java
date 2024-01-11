@@ -1,13 +1,35 @@
 package Arrays_Testing;
-import ArraysPkg.*;
+
+import ArraysPkg.PresenceOfOneArrayElement;
+import ArraysPkg.sumTwoNumbersEqualsTarget;
+import ArraysPkg.validMountainArray;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 
-public class arraysTest {
-
+public class Arrays {
 
     @Test
-    public void test_isItValidMountainArray() {
+    public static void testSequenceOfElementFromOneArrayToAnother()
+    {
+
+        Assertions.assertThat(PresenceOfOneArrayElement.sequenceOfElement(
+                new int[]{2,7,11,15},new int[]{2,15})).isEqualTo(true);
+
+        Assertions.assertThat(PresenceOfOneArrayElement.sequenceOfElement(
+                new int[]{2,7,11,10,9,15},new int[]{15,9})).isEqualTo(false);
+
+        Assertions.assertThat(PresenceOfOneArrayElement.sequenceOfElement(
+                new int[]{7,11},new int[]{7})).isEqualTo(true);
+
+        Assertions.assertThat(PresenceOfOneArrayElement.sequenceOfElement(
+                new int[]{7,11},new int[]{7,11})).isEqualTo(true);
+
+        Assertions.assertThat(PresenceOfOneArrayElement.sequenceOfElement(
+                new int[]{7,11},new int[]{11,7})).isEqualTo(false);
+    }
+
+    @Test
+    public static void test_isItValidMountainArray() {
 
 
         Assertions.assertThat(validMountainArray.validMountainArray(new int[]{1,2,3,2,1})).isTrue();
@@ -51,8 +73,8 @@ public class arraysTest {
 
 
 
-        @Test
-    public void sumofTwoNumbers_equalThrid() {
+    @Test
+    public static void sumofTwoNumbers_equalThrid() {
 
 
         Assertions.
@@ -76,4 +98,5 @@ public class arraysTest {
                 assertThat(sumTwoNumbersEqualsTarget.twoSum(new int[]{3,3}, 6)).isEqualTo(new int[]{0, 1});
 
     }
+
 }
